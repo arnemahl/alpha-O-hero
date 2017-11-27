@@ -15,19 +15,38 @@ var Game = {
                         y: 100*y,
                         width: 100,
                         height: 100,
-                        fill: 'green',
-                        stroke: 'black',
-                        strokeWidth: 1,
+                        fill: 'darkgreen',
+                    }),
+                    m('rect', {
+                        x: 100*x + 5,
+                        y: 100*y + 5,
+                        width: 90,
+                        height: 90,
+                        fill: 'rgba(0, 0, 0, 0.09)',
+                        stroke: 'rgba(255, 255, 255, 0.02)',
+                        'stroke-width': 4,
                         onclick: () => websocket.send(toWS('place-piece', {x, y}))
                     }),
                     tile === 'empty tile'
                         ? void 0
-                        : m('circle', {
-                            cx: 100*x + 50,
-                            cy: 100*y + 50,
-                            r: 40,
-                            fill: tile
-                        })
+                        : [
+                            m('circle', {
+                                cx: 100*x + 50,
+                                cy: 100*y + 50,
+                                r: 40,
+                                fill: tile,
+                                stroke: 'rgba(170, 170, 170, 0.1)',
+                                'stroke-width': 5
+                            }),
+                            m('circle', {
+                                cx: 100*x + 50,
+                                cy: 100*y + 50,
+                                r: 29,
+                                fill: 'rgba(170, 170, 170, 0.09)',
+                                stroke: 'rgba(170, 170, 170, 0.06)',
+                                'stroke-width': 3
+                            })
+                        ]
                 ])
             )
         ]);
