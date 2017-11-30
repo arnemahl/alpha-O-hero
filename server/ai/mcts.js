@@ -2,4 +2,9 @@
 /* Monte Carlo Tree Search (MCTS) */
 /**********************************/
 
-// TODO
+export default {
+    getNextMove({ gameState, getPossibleMoves, getNextState, evaluateState }) {
+        // TODO
+        // Search until some depth and return a move
+    }
+};

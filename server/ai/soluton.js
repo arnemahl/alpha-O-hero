@@ -3,14 +3,7 @@
 /**************************************/
 
 import mcts from './mcts';
-
-function getPossibleMoves(gameState) { // Game rules
-    ...
-}
-
-function getNextState(gameState, move) { // Game rules
-    ...
-}
+import { getPossibleMoves, getNextState } from './game';
 
 function useNetworkToEvaluateState(network, gameState) {
     ...
