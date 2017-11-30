@@ -10,6 +10,10 @@ function isGameOver(state) {
     ...
 }
 
+function getIndexOfWinner(state) {
+    ...
+}
+
 export function createGame() {
     let state = ...;
 
@@ -22,6 +26,9 @@ export function createGame() {
         },
         getState() {
             return state;
+        },
+        getIndexOfWinner() {
+            return getIndexOfWinner(state);
         }
     };
 }

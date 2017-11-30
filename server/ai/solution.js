@@ -11,6 +11,9 @@ function useNetworkToEvaluateState(network, gameState) {
 
 export function createSolution({ network }) {
     return {
+        getNetwork() {
+            return network;
+        },
         getNextMove(gameState) {
             // Do not need to know previous states like in Go,
             // so we just need a snapshot of the current state.

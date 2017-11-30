@@ -1,4 +1,4 @@
-import {createGame} from './game';
+import { createGame } from './game';
 
 export function playGame(solutionOne, solutionTwo) {
     const game = createGame();
@@ -11,5 +11,5 @@ export function playGame(solutionOne, solutionTwo) {
         game.applyMove(solutions[index].getNextMove(game.getState()));
     }
 
-    return gameResult;
+    return game.getIndexOfWinner();
 }
