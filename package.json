@@ -1,7 +1,7 @@
 {
-  "name": "ayerate",
+  "name": "alpha-O-hero",
   "version": "0.0.1",
-  "description": "Iterate's pirate game",
+  "description": "(Intention) Alpha Zero for Othello in JS",
   "scripts": {
     "start": "node server/index.js"
   },
